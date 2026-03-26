@@ -1,5 +1,16 @@
 #!/bin/bash
-
+#------------------------------------------------------------------
+#- Script by: mxzcabel
+#- https://github.com/mxzcabel
+#- Date: 26/03/14
+#- Last update date: 26/03/26
+#- Description: This script is for setting basic configs for pentesting
+#-------------- with Kali Linux Virtual Machine.
+#-------------- Just a fun exercise to share bash scripts basics
+#-------------- and programming skills.
+#------------------------------------------------------------------
+#
+#---------/---------/------------/--------------/------------------
 # TIMEZONE PARAMENTERS #
 DEFAULTIMEZONE="America/Sao_Paulo"
 TIMEZONE=$DEFAULTIMEZONE
