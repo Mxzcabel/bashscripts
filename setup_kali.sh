@@ -3,7 +3,7 @@
 #- Script by: mxzcabel
 #- https://github.com/mxzcabel
 #- Date: 26/03/14
-#- Last update date: 26/03/26
+#- Last update date: 26/04/01
 #- Description: This script is for setting basic configs for pentesting
 #-------------- with Kali Linux Virtual Machine.
 #-------------- Just a fun exercise to share bash scripts basics
@@ -60,7 +60,7 @@ displayHelp() {
 	echo "-g, --group		        which group the lab should use"
 	echo "-r, --root          	  	the workspace will be set at root instead of a home user"
 	echo "-p, --packages		  	define custom tools to install."
-	echo "				 use commas between packages to set ones within dash"
+	echo "				use commas between packages to set ones within dash"
 }
 
 # Verify environment before starting
@@ -216,7 +216,7 @@ paramenters() {
                     [[ ! "${!spaces}" ]] || [[ "${!spaces}" =~ ^"-" ]] && valid_flag=true
 
                 else
-                    [[ ! ${!opt} ]] && [[ ! "${!spaces}" =~ ^"-" ]] && [[ ! "${packages}" =~ ^"-" ]] && valid_flag=true
+                    [[ ! ${!opt} ]] || [[ "${!opt}" =~ ^"-" ]] && valid_flag=true
                 fi
 
                 if [[ $valid_flag == true && "$packages" =~ ^[a-zA-Z0-9,_-]+$ ]] ; then
